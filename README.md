@@ -53,7 +53,7 @@ Para instalar y ejecutar la tienda localmente:
 
 1. Clona el repositorio:
 
-git clone https://github.com/tu_usuario/mel-shops.git
+git clone https://github.com/Mayk03/Challenge-AluraGeek.git
 
 2. Navega a la carpeta del proyecto:
 
