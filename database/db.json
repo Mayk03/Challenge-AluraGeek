@@ -1,0 +1,46 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Pantalon Silvana",
+      "precio": "70",
+      "imagen": "https://www.dropbox.com/scl/fi/lmed8hbhn0caylyp9izxj/IMG-20241101-WA0003.jpg?rlkey=i3rjlv8c97vqngg34mdcfnn2z&st=3ipudj8s&raw=1"
+    },
+    {
+      "id": "2",
+      "nombre": "Vestido Kami",
+      "precio": "80",
+      "imagen": "https://www.dropbox.com/scl/fi/wpu8qjr02g5jpew12myfo/IMG-20241101-WA0005.jpg?rlkey=wrl21461gdx6j26xgtfws83c5&st=be33gc7p&raw=1"
+    },
+    {
+      "id": "3",
+      "nombre": "Camisera Lupe",
+      "precio": "50",
+      "imagen": "https://www.dropbox.com/scl/fi/4kzejiqc9igsix37yhq64/IMG-20241101-WA0025.jpg?rlkey=wy6cwnjt5tark7au2zoyk58u2&st=69uys9h3&raw=1"
+    },
+    {
+      "id": "4",
+      "nombre": "Blusa Andalucia",
+      "precio": "95",
+      "imagen": "https://www.dropbox.com/scl/fi/lohlaaouo6luzk9w0p9c9/IMG-20241101-WA0004.jpg?rlkey=gj1m0k611h142nih1hrjlvh7x&st=xoopxcvm&raw=1"
+    },
+    {
+      "id": "5",
+      "nombre": "Blusa Coda",
+      "precio": "85",
+      "imagen": "https://www.dropbox.com/scl/fi/pih06yorocww9cp5uqt5i/IMG-20241101-WA0030.jpg?rlkey=tcjv3hpj8g6xsbwmlfdxdi1j6&st=7bugmqc6&raw=1"
+    },
+    {
+      "id": "c698",
+      "nombre": "Blusa Zara",
+      "precio": "35",
+      "imagen": "https://www.dropbox.com/scl/fi/6tqjx7ytxfvd2k8w9wm63/IMG-20241101-WA0016.jpg?rlkey=f5hjkwilll1scvv1v8pn89pld&st=lh8l4fo7&raw=1"
+    },
+    {
+      "id": "fe6f",
+      "nombre": "Blusa Lili",
+      "precio": "67",
+      "imagen": "https://www.dropbox.com/scl/fi/7qdbg7znbjczlqdemo7nu/IMG-20241101-WA0022.jpg?rlkey=jd2o4quzgonzpmzhs56a4w6tx&st=hb7zmvoo&raw=1"
+    }
+  ]
+}

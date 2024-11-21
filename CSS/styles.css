@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+body {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #00FFB2;
+    padding: 1rem; /* Unidades relativas para el padding */
+}
+
+/* Estilos para el título */
+.titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem; /* Tamaño de fuente flexible */
+    color: #1A1A1A;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* Espaciado relativo */
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(200, 200, 200, 0.6);
+}
+
+.linea {
+    flex-grow: 1;
+    height: 0.125rem; /* Altura relativa */
+    background-color: #333333;
+    opacity: 0.7;
+}
+
+.main_container {
+    display: flex;
+    justify-content: end;
+}
+
+/* Sección de búsqueda */
+.titulo_busqueda {
+    font-family: 'pacifico', sans-serif;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0.0625rem #333;
+    font-size: 2rem; /* Tamaño de fuente flexible */
+    text-align: center;
+    margin-top: 1.4375rem;
+}
+
+.titulo_busqueda--span {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.busqueda_seccion {
+    width: 19%;
+    background-color: #F5F5DC;
+    padding: 0.625rem; /* Espaciado flexible */
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: solid 0.1875rem #C8C8C899;
+    position: absolute;
+    top: 100%;
+    left: 0.1875rem;
+    height: 25rem; /* Altura flexible */
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+    margin-top: 3.6875rem;
+}
+
+.busqueda_seccion.active {
+    display: block;
+}
+
+/* Contenedor de los elementos de la búsqueda */
+.busqueda_contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem; /* Espaciado flexible */
+}
+
+/* Barra de búsqueda */
+.barra_busqueda {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.75rem;
+    height: 2.5rem; /* Altura relativa */
+    padding: 0.9375rem 0.625rem;
+    margin-top: 3.125rem;
+    font-size: 1rem;
+    box-shadow: inset 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.1), 
+                0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Enfocar en la barra de búsqueda */
+.barra_busqueda:focus {
+    outline: none;
+    box-shadow: inset 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.1), 
+                inset 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.2),
+                0 0 0.625rem rgba(255, 165, 0, 0.5);
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem; /* Espaciado flexible */
+}
+
+.boton_enviar, 
+.boton_limpiar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 0.125rem solid #FF8A65;
+    margin: 0.3125rem;
+    cursor: pointer;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: inline-block;
+    padding: 0.5625rem 1.875rem;
+    border-radius: 0.75rem;
+}
+
+/* Hover en los botones */
+.boton_enviar:hover, .boton_limpiar:hover {
+    border-color: #FFA726;
+    box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el botón de toggle */
+.toggle_boton_container {
+    position: relative;
+}
+
+.toggle_boton {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: absolute;
+    left: 0.625rem;
+    transform: translateY(-50%);
+    color: #000;
+    border-radius: 0.3125rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFFFFF;
+    margin-top: 1.25rem;
+}
+
+.toggle_boton:hover {
+    transform: translateY(-60%);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.ojo_cerrado::before {
+    content: '\FE36';
+    font-size: 1.2rem;
+    transition: content 0.3s ease;
+    position: relative;
+    top: 0.3125rem;
+}
+
+.toggle_boton.active .ojo_cerrado::before {
+    content: '\1F441';
+    top: 0;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #00FFB2;
+    text-align: center;
+    padding: 0.625rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-top: 1.25rem;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.footer_titulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #1A1A1A;
+    position: relative;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(200, 200, 200, 0.6);
+}
+
+.footer_titulo .linea {
+    display: inline-block;
+    width: 3.125rem;
+    height: 0.125rem;
+    background-color: #333;
+    margin: 0 0.625rem;
+}

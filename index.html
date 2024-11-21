@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/agregar-producto.css">
+    <link rel="stylesheet" href="/CSS/productos.css">
+    <link rel="stylesheet" href="/CSS/responsividad.css">
+</head>
+<body>
+    <header>
+        <div class="titulo_container">
+            <h1 class="titulo"><span class="linea"></span>Mel Shops<span class="linea"></span></h1>
+        </div>
+    </header>
+    <div class="toggle_boton_container">
+        <button id="toggleBusqueda" class="toggle_boton">Buscar <span class="ojo_cerrado"></span></button>
+        <section class="busqueda_seccion" id="busquedaSeccion">
+            <p class="titulo_busqueda">Mel Shops <span class="titulo_busqueda--span">&#x1F6D2;</span></p>
+            <form class="busqueda_contenedor">
+                <input type="search" id="barraBusqueda" class="barra_busqueda" placeholder="Nombre..." required>
+                <div class="botones">
+                    <button type="button" id="botonEnviar" class="boton_enviar">Buscar &#x1F50D;</button>
+                    <button type="reset" id="botonLimpiar" class="boton_limpiar">Limpiar &#x1F9F9;</button>
+                </div>
+            </form>
+        </section>
+    </div>    
+    <h2 class="titulo-mis-productos">Mis Productos:</h2>
+    <main class="main_container" id="main-container">
+        <section data-producto class="productos_seccion">
+        <!--<div class="card_container">
+                <div class="card_image">
+                    <img 
+                        src="https://www.dropbox.com/scl/fi/lmed8hbhn0caylyp9izxj/IMG-20241101-WA0003.jpg?rlkey=i3rjlv8c97vqngg34mdcfnn2z&st=3ipudj8s&raw=1" 
+                        alt="Nombre del producto" 
+                        class="imagen-expandible">
+                </div>
+                <div class="card_info">
+                    <p class="nombre">Pantalón Silvana</p>
+                    <p class="precio">$30,00</p>
+                    <button class="boton_delate">
+                        <img src="/img/borrar(1).png" alt="Eliminar producto">
+                        <span class="tooltip">Eliminar</span>
+                    </button>
+                </div> 
+            </div> -->
+            <div class="fondo-oscuro"></div>
+        </section>
+            
+        <section class="agregar_producto" id="agregar-producto">
+            <h2>Agregar Producto:</h2>
+            <form data-agregar class="agregar_producto_contenedor">
+                <input data-nombre type="text" class="input_nombre" placeholder="Nombre..."required>
+                <input data-precio type="text" class="input_precio" placeholder="Precio..." required>
+                <input data-imagen type="text" class="input_imagen" placeholder="Imagen URL..."required>
+                <div class="botones_agregar_limpiar">
+                    <button type="submit" class="boton_agregar" id="boton">Agregar &#x2795;</button>
+                    <button type="reset" class="boton_limpiar_producto" id="boton">Limpiar &#x1F9F9;</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <h2 class="footer_titulo"><span class="linea"></span>AluraGeek<span class="linea"></span></h2>
+            <p>Proyecto de Alura Latam</p>
+            <p>Desarrollado por &copy; Maycol Quinto - 2024</p>
+            
+        </div>
+    </footer>
+    <script type="module" src="js/buscar.js"></script>
+    <script src="/js/imagen_expandible.js"></script>
+    <script type="module" src="js/mostrar-producto.js"></script>
+</body>
+</html>

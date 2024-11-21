@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Título de la sección */
+.titulo-mis-productos {
+    font-family: 'Bebas Neve', sans-serif;
+    font-size: 1.7rem;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* mensaje error al cargar los productos */
+.mensaje-error {
+    display: flex;
+    font-size: 1.5rem;
+    position: relative;
+    left: 17vw;
+}
+
+
+/* Sección de productos */
+.productos_seccion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 9px;
+    overflow: hidden;
+    padding: 0 30px 20px 30px;
+    position: relative;
+    left: 10px;
+}
+
+/* Tarjeta de producto */
+.card_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de zoom al pasar el cursor */
+.card_container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto */
+.card_image {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+/* Imagen expandida */
+.card_image img.imagen-expandible.expandida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+/* Fondo oscuro */
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar fondo oscuro */
+.fondo-oscuro.activo {
+    display: block;
+}
+
+/* Información del producto (nombre y precio) */
+.card_info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* Nombre del producto */
+.nombre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Precio del producto */
+.precio {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555555;
+    text-align: left;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Botón de eliminar */
+.boton_delate {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Imagen del ícono de eliminar */
+.boton_delate img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Efecto de presionar el ícono */
+.boton_delate:active img {
+    transform: translateY(2px);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip del botón de eliminar */
+.tooltip {
+    position: absolute;
+    transform: translateX(-50%);
+    left: -25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Mostrar el tooltip al pasar el mouse */
+.boton_delate:hover .tooltip {
+    opacity: 1;
+}
