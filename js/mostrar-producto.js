@@ -86,19 +86,22 @@ function capitalizarPalabras(texto) {
 // Función para eliminar el producto desde la API
 const eliminarProducto = async (id, card) => {
     try {
-        // Eliminar el producto de la API
+        const confirmacion = confirm('¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.');
+        if (!confirmacion) {
+            return;
+        }
         const respuesta = await fetch(`https://673e96f7a9bc276ec4b4ecfd.mockapi.io/productos/${id}`, {
             method: 'DELETE',
         });
-
         if (!respuesta.ok) {
             throw new Error('Error al eliminar el producto');
         }
         card.remove();
         alert('Producto eliminado con éxito ✅');
     } catch (error) {
-        console.log('Error al eliminar el producto', error);
+        alert('🚫 Error al eliminar el producto', error);
     }
 };
+
 
 mostrarProducto();

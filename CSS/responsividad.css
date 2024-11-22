@@ -112,7 +112,7 @@
 }
 
 /* Pantallas muy pequeñas (móviles) */
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .main_container {
         display: flex;
         flex-direction: column;
@@ -135,15 +135,15 @@
         display: block;
     }
 
-    .busqueda_contenedor{
+    .busqueda_contenedor {
         gap: 35px;
     }
 
-    .barra_busqueda{
+    .barra_busqueda {
         margin-top: 40px;
     }
 
-    .botones{
+    .botones {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -151,7 +151,7 @@
     }
 
     .boton_enviar, 
-    .boton_limpiar{
+    .boton_limpiar {
         padding: 9px 40px;
     }
 
@@ -162,21 +162,42 @@
 
     .productos_seccion {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        padding: 0 10px;
+        padding: 0 15px;
         width: 100%;
         left: 0;
     }
 
     .card_container {
-        height: 400px;
+        display: flex;
         width: 100%;
+        height: 400px;
         margin-bottom: 10px;
     }
 
+    .card_image {
+        flex: 80;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card_image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card_info {
+        flex: 20;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .agregar_producto {
-        width: 98%;
+        width: 95%;
         margin-top: 10px;
         left: 0;
     }
@@ -193,15 +214,6 @@
     .titulo-mis-productos {
         font-size: 1.5rem;
         margin-top: 10px;
-    }
-
-    .card_info {
-        padding: 5px;
-    }
-
-    .card_image img {
-        height: 100%;
-        object-fit: cover;
     }
 
     .card_container:hover {
@@ -223,5 +235,24 @@
         justify-content: center;
         margin-top: 10px;
         gap: 10px;
+    }
+
+    /* Imagen expandida */
+    .card_image img.imagen-expandible.expandida {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+        transition: transform 0.3s ease;
+    }
+
+    /* Fondo oscuro desactivado en móviles */
+    .fondo-oscuro {
+        display: none !important;
     }
 }
