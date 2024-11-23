@@ -3,10 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fondoOscuro = document.querySelector('.fondo-oscuro');
 
     const toggleImagenExpandida = (imagen) => {
-        setTimeout(() => {
-            imagen.classList.toggle('expandida');
-            fondoOscuro.classList.toggle('activo');
-        }, 0);
+        imagen.classList.toggle('expandida');
+        fondoOscuro.classList.toggle('activo', imagen.classList.contains('expandida'));
     };
 
     const cerrarImagenExpandida = () => {
@@ -19,11 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     contenedorProducto.addEventListener('click', (event) => {
         const imagen = event.target.closest('.imagen-expandible');
-
         if (imagen) {
             toggleImagenExpandida(imagen);
-        } else if (event.target === fondoOscuro) {
-            cerrarImagenExpandida();
         }
     });
+
+    fondoOscuro.addEventListener('click', cerrarImagenExpandida);
 });
